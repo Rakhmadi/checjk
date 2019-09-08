@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model='input'>
+        <button @click='click'>Sumbit</button>
+        <h3 v-for="s in skill" v-text='s.skill'></h3>
+        <h1>{{skill}}</h1>
+    </div>
+    <script>
+    var n=new Vue({
+        el:'#app',
+        data(){
+            return{
+                input:'',
+                name:'',
+                age:'',
+                class:'',
+                skill:[
+                    {
+                        skil1:'java',
+                        skil2:'php',
+                    }
+                ]
+
+            }
+        },
+        methods: {
+            click(){
+                return this.name=this.input;
+            }
+        },
+        
+    })
+    </script>
+</body>
+</html>
